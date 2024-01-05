@@ -1,0 +1,94 @@
+.add-book {
+  width: 100%;
+  padding: 30px 50px;
+}
+.add-booktext {
+  padding-bottom: 20px;
+}
+.add-booktext h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.formbox label {
+  font-size: 19px;
+}
+form button {
+  width: 200px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #546dff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: white;
+  height: 55px;
+  margin-top: 10px;
+}
+form button:hover {
+  background-color: #2980b9;
+}
+.input-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.input-field .formbox {
+  width: 50%;
+}
+.formbox select {
+  width: 100%;
+  height: 55px;
+  padding: 1px;
+  background: none;
+  border: 1px solid #dcdde1;
+  font-size: 17px;
+}
+.input-field .formbox input {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  font-size: 17px;
+  background: none;
+  border: 1px solid #dcdde1;
+}
+.input-fieldbox {
+  width: 100%;
+}
+.input-fieldbox input {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  font-size: 17px;
+  background: none;
+  border: 1px solid #dcdde1;
+}
+.input-fieldbox {
+  margin-bottom: 10px;
+}
+.input-fieldbox label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.picture-addfield {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #dcdde1;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+.picture-addfield input {
+  font-size: 17px;
+}
+::-webkit-file-upload-button {
+  padding: 10px;
+  background-color: #546dff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+}
