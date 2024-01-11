@@ -115,3 +115,51 @@ footer {
   border: none;
   color: white;
 }
+
+/* ----------------responsive code ------------- */
+@media (max-width: 768px) {
+  .footer-box1 {
+    padding: 10px 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footersub-box1 {
+    width: 100%;
+  }
+  .footersub-box2 {
+    width: 100%;
+  }
+  .footersub-box2 h2 {
+    font-size: 18px;
+  }
+  .footersub-box3 h2 {
+    font-size: 18px;
+  }
+  .footersub-box3 {
+    width: 100%;
+  }
+  .footersub-box3 form button {
+    width: auto;
+    padding: 10px 15px;
+  }
+  .footer-box2 {
+    width: 100%;
+    padding: 15px 30px;
+    height: auto;
+    text-align: center;
+  }
+  .footer-box2 p {
+    font-size: 16px;
+  }
+  .footersub-box1 p {
+    font-size: 15px;
+  }
+  .footersocial-icon {
+    width: auto;
+    height: auto;
+    padding: 8px 10px;
+  }
+  .footersub-box2 ul li a {
+    font-size: 15px;
+  }
+}

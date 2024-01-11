@@ -29,7 +29,7 @@
         <header>
           <div class="logo">
             <img src="/images/transparent.png" alt="" />
-            <h2>অল কেয়ার একাডেমী</h2>
+            <h2>All Care Academy</h2>
           </div>
           <div class="searchbar-header">
             <div class="search-inpfield">
@@ -49,9 +49,9 @@
           <nav>
             <ul>
               <!-- <li><a href="/">Home</a></li>
-                <li><a href="/first-year-books">First Year</a></li>
-                <li><a href="/second-year-books">Second Year</a></li>
-                <li><a href="/contact">Contact</a></li> -->
+                  <li><a href="/first-year-books">First Year</a></li>
+                  <li><a href="/second-year-books">Second Year</a></li>
+                  <li><a href="/contact">Contact</a></li> -->
               <button><a href="/login">Log In</a></button>
             </ul>
           </nav>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="allbook-right">
-          <%if(bookdata.length > 0){%> <%bookdata.forEach((data)=>{%>
+          <%if(bookdata.length > 0){%> <%bookdata.slice(0,6).forEach((data)=>{%>
           <div class="bookinfo-box">
             <a href="/book-information/<%=data._id%>">
               <div class="bookinfo-subbox">
@@ -111,10 +111,15 @@
       <!-- ----------------------footer------------------- -->
     </div>
     <script>
+      let autof = document.querySelectorAll(".auto-suggetion ul li");
+      autof.forEach((da) => {
+        da.addEventListener("click", function (e) {
+          autocomplete_search.value = e.target.attributes.title.value;
+        });
+      });
       let autocomplete_search = document.getElementById("searchfield");
       let search_result = document.querySelector(".auto-suggetion");
       autocomplete_search.addEventListener("input", () => {
-        search_result.style.display = "block";
         load_data(autocomplete_search.value);
       });
       async function load_data(query) {
@@ -135,7 +140,7 @@
               let createboximg = document.createElement("img");
               createboximg.src = element.image;
               createh2.innerHTML = element.class_name;
-              createp.innerHTML = element.full_name;
+              createp.innerHTML = element.book_name;
               let createbox = document.createElement("div");
               let createbox2 = document.createElement("div");
               createbox.setAttribute("class", "sugbox1");
@@ -151,8 +156,6 @@
               search_result.appendChild(createbox);
               createbox.addEventListener("click", (e) => {
                 autocomplete_search.value = e.target.title;
-                search_result.style.display = "none";
-
                 // console.log(e.target.title);
               });
               // search_result.innerHTML += `

@@ -52,3 +52,24 @@
   border-radius: 2px;
   border: 1px solid #ecf0f1;
 }
+/* activelink */
+.activelink {
+  color: black;
+}
+
+/* ---------------responsive code----------------- */
+@media (max-width: 768px) {
+  .allbook-home {
+    flex-direction: column-reverse;
+    padding: 20px 30px;
+  }
+  .allbook-left {
+    width: 100%;
+  }
+  .allbook-right {
+    width: 100%;
+  }
+  .bookinfo-box {
+    width: 45%;
+  }
+}

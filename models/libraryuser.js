@@ -1,26 +1,22 @@
 const mongoose = require("mongoose");
 
-const addbookscema = mongoose.Schema({
+const libraryschema = mongoose.Schema({
   book_name: {
     type: String,
     required: true,
     trim: true,
   },
-  book_type: {
-    type: String,
-    required: true,
-  },
-  full_name: {
+  student_name: {
     type: String,
     required: true,
     trim: true,
   },
-  image: {
+  student_id: {
     type: String,
     required: true,
     trim: true,
   },
-  company_name: {
+  class: {
     type: String,
     required: true,
     trim: true,
@@ -28,25 +24,28 @@ const addbookscema = mongoose.Schema({
   group_name: {
     type: String,
     required: true,
-  },
-  writter_name: {
-    type: String,
-    required: true,
     trim: true,
   },
-  class_name: {
+  subject_type: {
     type: String,
     required: true,
-    trim: true,
   },
   book_year: {
     type: String,
     required: true,
     trim: true,
   },
-  quantity: {
+  days: {
+    type: String,
+    required: true,
+  },
+  receiving_time: {
+    type: String,
+    required: true,
+  },
+  giving_time: {
     type: String,
     required: true,
   },
 });
-module.exports = new mongoose.model("Bookinfo", addbookscema);
+module.exports = new mongoose.model("libraryuser", libraryschema);

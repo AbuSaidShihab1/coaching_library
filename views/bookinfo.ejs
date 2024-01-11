@@ -29,13 +29,7 @@
       <div class="header-main">
         <%-include("./partials/header.ejs")%>
         <!-- subheader -->
-        <div class="subheader">
-          <ul>
-            <li><a href="/">হোম</a></li>
-            <li><a href="/books">বই</a></li>
-            <li><a href="/books-2024">বইমেলা ২০২৪</a></li>
-          </ul>
-        </div>
+        <%-include("./partials/subheader.ejs")%>
         <!-- subheader -->
       </div>
       <!-- ----------------all book information------------------ -->
@@ -45,11 +39,14 @@
         </div>
         <div class="book-allinfos">
           <h2><%=matchbookdata.full_name%></h2>
-          <p>লেখক :<%=matchbookdata.writter_name%></p>
-          <p>প্রকাশনী : <%=matchbookdata.company_name%></p>
-          <p>বিষয় : <%=matchbookdata.book_name%></p>
+          <p>লেখক :<span><%=matchbookdata.writter_name%></span></p>
+          <p>প্রকাশনী : <span><%=matchbookdata.company_name%></span></p>
+          <p>বিষয় : <span><%=matchbookdata.book_name%></span></p>
           <div class="stock-box">
-            <p><%=matchbookdata.quantity%> টি আছে</p>
+            <div class="stock-img">
+              <img src="/images/check.png" alt="" />
+            </div>
+            <p><span><%=matchbookdata.quantity%></span> টি আছে</p>
           </div>
         </div>
       </div>

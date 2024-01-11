@@ -79,3 +79,17 @@ form button {
   display: block;
   margin: auto;
 }
+
+/* -------------login-------------- */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 20px;
+    height: 80vh;
+  }
+  .login-box {
+    width: 100%;
+  }
+  .login-box h1 {
+    font-size: 20px;
+  }
+}

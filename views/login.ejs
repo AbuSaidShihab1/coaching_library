@@ -24,7 +24,45 @@
   <body>
     <div class="login-container">
       <div class="login-main">
-        <%-include("./partials/header.ejs")%>
+        <div class="header-main">
+          <header>
+            <div class="logo">
+              <img src="/images/transparent.png" alt="" />
+              <h2>All Care Academy</h2>
+            </div>
+            <div class="searchbar-header">
+              <div class="search-inpfield">
+                <form action="/search_page" method="post">
+                  <input
+                    type="text"
+                    name="search"
+                    id="searchfield"
+                    autocomplete="off"
+                    placeholder="বইয়ের নাম ও লেখক দিয়ে অনুসন্ধান করুন"
+                  />
+                  <button><i class="bx bx-search"></i></button>
+                </form>
+              </div>
+              <div class="auto-suggetion"></div>
+            </div>
+            <nav>
+              <ul>
+                <!-- <li><a href="/">Home</a></li>
+                  <li><a href="/first-year-books">First Year</a></li>
+                  <li><a href="/second-year-books">Second Year</a></li>
+                  <li><a href="/contact">Contact</a></li> -->
+                <button><a href="/login">Log In</a></button>
+              </ul>
+            </nav>
+            <div class="sidebar">
+              <i class="bx bx-menu"></i>
+            </div>
+          </header>
+
+          <!-- subheader -->
+          <%-include("./partials/subheader.ejs")%>
+          <!-- subheader -->
+        </div>
         <div class="login-form">
           <div class="login-box">
             <h1>Admin Log In</h1>

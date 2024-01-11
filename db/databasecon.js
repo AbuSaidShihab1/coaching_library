@@ -2,10 +2,13 @@ const mongoose = require("mongoose");
 
 const databsecon = () => {
   mongoose
-    .connect("mongodb://127.0.0.1:27017/library", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+    .connect(
+      `mongodb+srv://shihabmoni15:${process.env.mongo_pass}@cluster0.c0tr6qk.mongodb.net/?retryWrites=true&w=majority`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    )
     .then((res) => {
       console.log("Databse connected");
     })

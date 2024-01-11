@@ -72,71 +72,22 @@
                 </tr>
               </thead>
               <tbody>
+                <%firstyeardata.forEach((data)=>{%>
                 <tr>
-                  <td>Chemisty</td>
-                  <td>Abu Said Shihab</td>
-                  <td>FIrst Year</td>
-                  <td>2023</td>
-                  <td>203456</td>
-                  <td>10/05/2023</td>
-                  <td>10/05/2023</td>
+                  <td><%=data.book_name%></td>
+                  <td><%=data.student_name%></td>
+                  <td><%=data.class%></td>
+                  <td><%=data.book_year%></td>
+                  <td><%=data.student_id%></td>
+                  <td><%=data.receiving_time%></td>
+                  <td><%=data.giving_time%></td>
+
                   <td>
-                    <a href="#">Update</a>
-                    <a href="#">Delete</a>
+                    <a href="/update-book/<%=data._id%>">Update</a>
+                    <a href="/delete-book/<%=data._id%>">Delete</a>
                   </td>
                 </tr>
-                <tr>
-                  <td>Chemisty</td>
-                  <td>Abu Said Shihab</td>
-                  <td>FIrst Year</td>
-                  <td>2023</td>
-                  <td>203456</td>
-                  <td>10/05/2023</td>
-                  <td>10/05/2023</td>
-                  <td>
-                    <a href="#">Update</a>
-                    <a href="#">Delete</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Chemisty</td>
-                  <td>Abu Said Shihab</td>
-                  <td>FIrst Year</td>
-                  <td>2023</td>
-                  <td>203456</td>
-                  <td>10/05/2023</td>
-                  <td>10/05/2023</td>
-                  <td>
-                    <a href="#">Update</a>
-                    <a href="#">Delete</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Chemisty</td>
-                  <td>Abu Said Shihab</td>
-                  <td>FIrst Year</td>
-                  <td>2023</td>
-                  <td>203456</td>
-                  <td>10/05/2023</td>
-                  <td>10/05/2023</td>
-                  <td>
-                    <a href="#">Update</a>
-                    <a href="#">Delete</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Chemisty</td>
-                  <td>Abu Said Shihab</td>
-                  <td>FIrst Year</td>
-                  <td>2023</td>
-                  <td>203456</td>
-                  <td>10/05/2023</td>
-                  <td>10/05/2023</td>
-                  <td>
-                    <a href="#">Update</a>
-                    <a href="#">Delete</a>
-                  </td>
-                </tr>
+                <%})%>
               </tbody>
             </table>
           </div>
