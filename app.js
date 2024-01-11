@@ -2,6 +2,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const express = require("express");
 const app = express();
+const port = process.env.port || 5000;
 const route = require("./routes/index");
 const databsecon = require("./db/databasecon");
 const bodyparser = require("body-parser");
@@ -12,6 +13,6 @@ app.use(route);
 databsecon();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.listen(5000, function () {
+app.listen(port, function () {
   console.log("Your website run on Port:");
 });
